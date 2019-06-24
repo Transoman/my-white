@@ -20,7 +20,8 @@ module.exports = function () {
             .pipe(gp.sourcemaps.write())
             .pipe(gp.rename('styles.min.css'))
             .pipe($.gulp.dest(stylesPATH.ouput))
-            .on('end', $.browserSync.reload);
+            .pipe($.browserSync.stream());
+            // .on('end', $.browserSync.reload);
     });
     $.gulp.task('styles:build', () => {
         return $.gulp.src(stylesPATH.input + 'style.sass')

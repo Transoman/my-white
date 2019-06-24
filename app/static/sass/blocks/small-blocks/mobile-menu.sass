@@ -10,10 +10,9 @@
   padding: 100px 100px 30px
   background-color: $bg-color
   overflow-y: auto
-  +trans(transform, 0.8s)
   transform: translateX(-100%)
-  &.is-active
-    transform: translateX(0)
+  &::-webkit-scrollbar
+    display: none
   +r(767)
     padding: 80px 30px 30px
   &__close

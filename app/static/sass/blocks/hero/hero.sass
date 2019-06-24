@@ -1,0 +1,136 @@
+.hero
+  position: relative
+  padding: 160px 0 150px
+  background:
+    color: #82858b
+    repeat: no-repeat
+    position: center top
+    size: cover
+  +r(992)
+    padding: 110px 0 90px
+  +r(576)
+    padding: 50px 15px
+  &::before
+    content: ''
+    position: absolute
+    top: 10px
+    right: 10px
+    bottom: 10px
+    left: 10px
+    border: 1px solid #fff
+    pointer-events: none
+  &__content
+    +r(576)
+      margin-bottom: 30px
+    h1
+      margin-bottom: 30px
+      font-size: 61px
+      color: #fff
+      line-height: 1.3
+      letter-spacing: 0.03em
+      text-transform: uppercase
+      text-shadow: 5px 5px 30px rgba(0, 0, 0, 0.15)
+      +r(1200)
+        font-size: 54px
+      +r(992)
+        font-size: 44px
+      +r(767)
+        font-size: 32px
+      +r(576)
+        font-size: 22px
+      span
+        position: relative
+        display: block
+        margin-bottom: 10px
+        font-size: 25px
+        font-weight: 500
+        +r(992)
+          font-size: 21px
+        +r(767)
+          font-size: 16px
+        &::before
+          content: ''
+          display: inline-block
+          vertical-align: middle
+          width: 50px
+          height: 4px
+          margin-right: 20px
+          margin-top: -4px
+          background-color: #fff
+    .btn
+      border-color: #fff
+      font-size: 21px
+      font-weight: 600
+      color: #fff
+      width: 100%
+      max-width: 260px
+      padding:
+        top: 18px
+        bottom: 19px
+      +r(576)
+        font-size: 16px
+        max-width: 230px
+      &:hover
+        color: $main-color
+        &::before
+          background-color: #fff
+  &__media
+    position: absolute
+    right: 80px
+    bottom: 80px
+    display: flex
+    flex-direction: column
+    align-items: center
+    color: #fff
+    +r(767)
+      right: 30px
+      bottom: 30px
+    +r(576)
+      position: static
+      right: auto
+      bottom: auto
+      flex-direction: row
+      padding: 0 15px
+    p
+      position: absolute
+      top: -120px
+      right: -100px
+      margin: 0
+      font-size: 16px
+      font-weight: 500
+      text-transform: uppercase
+      white-space: nowrap
+      transform: rotate(-90deg)
+      +r(576)
+        position: static
+        right: auto
+        bottom: auto
+        transform: none
+        margin-right: 20px
+      &::before
+        content: ''
+        display: inline-block
+        vertical-align: super
+        width: 50px
+        height: 1px
+        margin: 0 40px
+        background-color: #fff
+        +r(576)
+          display: none
+  &__social
+    flex-direction: column
+    +r(576)
+      flex-direction: row
+    li
+      margin-right: 0
+      margin-bottom: 40px
+      +r(576)
+        margin-bottom: 0
+        margin-right: 20px
+      &:last-child
+        margin-bottom: 0
+    .social
+      &__icon
+        fill: #fff
+        &:hover, &:focus
+          fill: $accent

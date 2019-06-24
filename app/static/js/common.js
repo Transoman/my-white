@@ -13,12 +13,13 @@ jQuery(document).ready(function($) {
   });
 
   var t1 = new TimelineMax({paused: true});
+  t1.to('.mobile-menu', 0.8, {x:0});
+
   t1.staggerFrom(".mobile-menu__list li", 2, {
     opacity: 0,
     x: 100,
-    ease: Power3.easeInOut,
-    delay: 0.5
-  }, 0.1);
+    ease: Power3.easeInOut
+  }, 0.1, '-=0.5');
 
   t1.staggerFrom(".mobile-menu__social li", 1, {
     opacity: 0,
@@ -37,13 +38,11 @@ jQuery(document).ready(function($) {
   $('.nav-toggle').on('click', function (e) {
     e.preventDefault();
     t1.reversed(!t1.reversed());
-    $('.mobile-menu').toggleClass('is-active');
   });
 
   $('.mobile-menu__close').on('click', function (e) {
     e.preventDefault();
     t1.reversed(!t1.reversed());
-    $('.mobile-menu').toggleClass('is-active');
   });
 
   // SVG
