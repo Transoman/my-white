@@ -1,0 +1,18 @@
+.menu
+  margin: 0
+  padding: 0
+  list-style: none
+  display: flex
+  align-items: center
+  li
+    margin-right: 50px
+    +r(1200)
+      margin-right: 40px
+    &:last-child
+      margin-right: 0
+  a
+    font-weight: 500
+    text-transform: uppercase
+    color: $main-color
+    &:hover, &:focus
+      color: $accent
