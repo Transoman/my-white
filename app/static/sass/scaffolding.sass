@@ -21,6 +21,7 @@
 /* Common styles */
 html
   height: 100%
+  overflow-x: hidden
 
 body
   margin: 0
@@ -107,6 +108,7 @@ section
     border: inherit
     +trans(all, 0.6s)
   &:hover
+    color: #fff
     &::before
       top: 0
       left: 0
@@ -114,6 +116,7 @@ section
   &:active
     background-color: darken($accent, 5%)
   &:focus
+    color: #fff
     &::before
       top: 0
       left: 0
@@ -175,3 +178,20 @@ section
       padding: 0 30px
     +r(576)
       padding: 0 15px
+
+.text-accent
+  font-size: 20px
+  text-transform: uppercase
+  +r(767)
+    font-size: 18px
+  &::before, &::after
+    content: ''
+    display: block
+    width: 95%
+    height: 1px
+    margin: 30px 0
+    background-color: $accent
+
+.read-more
+  font-size: 16px
+  text-decoration: underline
