@@ -45,6 +45,96 @@ jQuery(document).ready(function($) {
     t1.reversed(!t1.reversed());
   });
 
+  $('.ajax-form').submit(function(e) {
+    e.preventDefault();
+    var data = $(this).serialize();
+    ajaxSend($('.ajax-form'), data);
+  });
+
+  function ajaxSend(formName, data) {
+    jQuery.ajax({
+      type: "POST",
+      url: "sendmail.php",
+      data: data,
+      success: function() {
+        $(".modal").popup("hide");
+        $("#thanks").popup("show");
+        setTimeout(function() {
+          $(formName).trigger('reset');
+        }, 2000);
+      }
+    });
+  }
+
+  $('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        if ($(window).width() > 767) {
+          var offset = $('.header__top').height();
+        }
+        else {
+          var offset = $('.header__bottom').height();
+        }
+
+        if (!t1.reversed()) {
+          t1.reversed(!t1.reversed());
+        }
+        $('html, body').animate({
+          scrollTop: target.offset().top - offset
+        }, 1000);
+      }
+    }
+  });
+
+  // Fixed header
+  var fixedHeader = function(e) {
+    if ($(window).width() > 767) {
+      var h = $('.header__top').innerHeight();
+
+      if (e.scrollTop() > 150) {
+        $('.header').css('padding-bottom', h);
+        $('.header__top').addClass('fixed');
+      }
+      else {
+        $('.header').css('padding-bottom', 0);
+        $('.header__top').removeClass('fixed');
+      }
+    }
+    else {
+      var h = $('.header__bottom').innerHeight();
+
+      if (e.scrollTop() > 150) {
+        $('.header').css('padding-bottom', h);
+        $('.header__bottom').addClass('fixed');
+      }
+      else {
+        $('.header').css('padding-bottom', 0);
+        $('.header__bottom').removeClass('fixed');
+      }
+    }
+  };
+
+  fixedHeader($(this));
+
+  $(window).scroll(function() {
+    fixedHeader($(this));
+  });
+
   // SVG
   svg4everybody({});
 

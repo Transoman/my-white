@@ -1,0 +1,36 @@
+#order.modal
+  button(type="button").order_close.modal__close Close
+    span.modal__close-line
+
+  h3.modal__title Заказ рубашки
+
+  form.ajax-form.modal__form
+    input(type="hidden", name="subject", value="Заказ рубашки")
+    .form-group
+      input(type="text", name="name", placeholder="Ваше имя", required).form-field
+    .form-group
+      input(type="tel", name="phone", placeholder="Ваш телефон", required).form-field
+    .form-group
+      button(type="submit").btn Отправить
+
+#meeting.modal
+  button(type="button").meeting_close.modal__close Close
+    span.modal__close-line
+
+  h3.modal__title Записаться на встречу
+
+  form.ajax-form.modal__form
+    input(type="hidden", name="subject", value="Записаться на встречу")
+    .form-group
+      input(type="text", name="name", placeholder="Ваше имя", required).form-field
+    .form-group
+      input(type="tel", name="phone", placeholder="Ваш телефон", required).form-field
+    .form-group
+      button(type="submit").btn Записаться
+
+#thanks.modal
+  button(type="button").thanks_close.modal__close Close
+    span.modal__close-line
+
+  h3.modal__title Спасибо за заказ
+  p Скоро мы Вам перезвоним!

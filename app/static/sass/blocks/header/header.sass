@@ -3,6 +3,14 @@
     background-color: #F0F5F7
     +r(767)
       padding: 3px 0
+    &.fixed
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      z-index: 10
+      animation: slideDown 0.5s ease-in-out
+      +trans
   &__phone
     margin-left: auto
     +r(767)
@@ -18,6 +26,15 @@
       padding: 20px 0
     +r(767)
       padding: 10px 0
+    &.fixed
+      position: fixed
+      top: 0
+      left: 0
+      right: 0
+      z-index: 10
+      animation: slideDown 0.5s ease-in-out
+      +trans
+      box-shadow: 0 0 10px rgba(#000, 0.1)
   &__logo
     margin-right: 15px
     .logo
