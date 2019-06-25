@@ -1,1 +1,32 @@
 footer.footer
+  .footer__top
+    .container
+      .footer__top-wrap
+        a(href="./").logo.footer__logo
+          img(src="static/images/general/logo.jpg", alt="My White", width="160")
+        ul.menu.footer__menu
+          li
+            a(href="#advantages") Преимущества
+          li
+            a(href="#services") Услуги
+          li
+            a(href="#how-work") Как заказать
+          li
+            a(href="#about") О компании
+          li
+            a(href="#contact") Контакты
+
+  .footer__bottom
+    .container
+      .footer__col
+        p.copy &copy; 2009 - 2019 Интернет-ателье «MY WHITE»
+      .footer__col
+        ul.social.footer__social
+          li
+            a(href="#", target="_blank")
+              +icon('facebook', 'social__icon')
+          li
+            a(href="#", target="_blank")
+              +icon('instagram', 'social__icon')
+      .footer__col
+        a(href="#") Политика конфиденциальности

@@ -1,0 +1,54 @@
+.contact
+  &__wrap
+    display: flex
+    align-items: center
+    +r(767)
+      flex-direction: column-reverse
+  &__map
+    flex-shrink: 0
+    width: 51.28%
+    height: 500px
+    background-color: $bg-color
+    +r(767)
+      width: 100%
+    +r(576)
+      height: 300px
+  &__content
+    flex-grow: 1
+    padding-left: 70px
+    +r(1200)
+      padding-left: 30px
+    +r(767)
+      padding-left: 0
+      margin-bottom: 30px
+    .btn
+      margin-top: 40px
+      color: $main-color
+      +r(767)
+        display: block
+        max-width: 260px
+        width: 100%
+        margin: 40px auto 0
+      &:hover, &:focus
+        color: #fff
+  &__info
+    margin-bottom: 30px
+    &:last-of-type
+      margin-bottom: 0
+    p, a
+      font-size: 21px
+      font-weight: 500
+      +r(992)
+        font-size: 18px
+    a
+      color: $main-color
+      &:hover, &:focus
+        color: $accent
+    &-label
+      display: block
+      margin-bottom: 15px
+      font-size: 16px
+      font-weight: 700
+      text-transform: uppercase
+      color: #BABABA
+      letter-spacing: 0.1em

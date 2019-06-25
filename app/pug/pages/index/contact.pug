@@ -1,0 +1,40 @@
+section.contact
+  .container
+    h2.section-title
+      span Наши Контакты
+    .contact__wrap
+        .contact__map
+        .contact__content
+          .contact__info
+            span.contact__info-label Адрес
+            p 123290 Москва, 1-й Магистральный тупик, д.5А. Бизнес центр «Магистраль Плаза»
+          .contact__info
+            span.contact__info-label телефон
+            a(href="tel:+74993726040") +7 499 372 6040
+          .contact__info
+            span.contact__info-label почта
+            a(href="mailto:info@nsm-group.ru") info@nsm-group.ru
+
+          a(href="#").btn записаться на встречу
+
+script.
+  function initMap() {
+    var uluru = {lat: 55.7662926, lng: 37.5324941};
+    var image = {
+      url: 'static/images/general/pin.png',
+      size: new google.maps.Size(60, 73),
+      anchor: new google.maps.Point(25, 73)
+    };
+    var map = new google.maps.Map(document.querySelector('.contact__map'), {
+      zoom: 17,
+      center: uluru,
+      styles: [{"featureType":"all","stylers":[{"saturation":0},{"hue":"#e7ecf0"}]},{"featureType":"road","stylers":[{"saturation":-70}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"water","stylers":[{"visibility":"simplified"},{"saturation":-60}]}]
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map,
+        icon: image,
+      });
+    }
+
+script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaX1QlThDnYC0tJp8PL9kdxufKXTfIy_0&callback=initMap")

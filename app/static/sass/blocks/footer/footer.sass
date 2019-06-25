@@ -1,0 +1,76 @@
+.footer
+  &__top
+    &-wrap
+      display: flex
+      align-items: flex-end
+      padding-bottom: 45px
+      border-bottom: 1px solid $accent
+      +r(992)
+        flex-direction: column
+        align-items: center
+        padding-bottom: 30px
+  &__bottom
+    padding: 40px 0 50px
+    +r(576)
+      padding: 30px 0
+    .container
+      display: flex
+      align-items: center
+      +r(576)
+        flex-direction: column
+  &__logo
+    margin-right: 120px
+    +r(992)
+      margin-right: 0
+      margin-bottom: 30px
+  &__menu
+    +r(992)
+      margin-left: 0
+    +r(767)
+      flex-direction: column
+    li
+      margin-right: 85px
+      +r(767)
+        margin-right: 0
+        margin-bottom: 10px
+        &:last-child
+          margin-bottom: 0
+    a
+      font-size: 13px
+  &__col
+    width: 33.33%
+    +r(576)
+      width: 100%
+      text-align: center
+      margin-bottom: 20px
+    &:first-child
+      +r(576)
+        order: 1
+    &:last-child
+      text-align: right
+      +r(576)
+        text-align: center
+      a
+        font-weight: 500
+        text-decoration: underline
+  &__social
+    justify-content: center
+    a
+      display: block
+      width: 45px
+      height: 45px
+      text-align: center
+      line-height: 41px
+      border: 1px solid $accent
+      &:hover
+        background-color: $accent
+        .social
+          &__icon
+            fill: #fff
+
+
+.copy
+  margin: 0
+  font-size: 13px
+  font-weight: 500
+  color: #7C8491
