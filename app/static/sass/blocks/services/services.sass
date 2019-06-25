@@ -1,0 +1,126 @@
+.services
+  padding-top: 0
+  padding-bottom: 0
+  .section-title
+    margin-bottom: 45px
+
+.services-list
+  &__item
+    position: relative
+    z-index: 1
+    //height: calc(100% - 30px)
+    margin-bottom: 30px
+    overflow: hidden
+    &::before
+      content: ''
+      position: absolute
+      top: 10px
+      right: 10px
+      bottom: 10px
+      left: 10px
+      border: 1px solid $accent
+      pointer-events: none
+      +trans
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background-color: rgba(46, 55, 70, 0.75)
+      +trans(all, 0.5s)
+      transform: scale(1, 0)
+      +r(767)
+        transform: none
+    &:hover
+      &::after
+        transform: scale(1, 1)
+      .services-list
+        &__content
+          .btn
+            opacity: 1
+            visibility: visible
+            transform: translate3d(0, 0, 0)
+            //display: block
+        &__title
+          transform: translate3d(0, 0, 0)
+          color: #fff
+        &__descr
+          opacity: 1
+          visibility: visible
+          transform: translate3d(0, 0, 0)
+          color: #fff
+    img
+      width: 100%
+    &--white
+      .services-list
+        &__title
+          color: #fff
+  &__content
+    position: absolute
+    top: 50%
+    left: 50%
+    z-index: 1
+    transform: translate(-50%, -50%)
+    width: 100%
+    padding: 0 20px
+    text-align: center
+    .btn
+      margin-top: 15px
+      padding:
+        right: 70px
+        left: 70px
+      border-color: #fff
+      color: #fff
+      opacity: 0
+      visibility: hidden
+      transform: translate3d(0, 40px, 0)
+      +trans(all, 0.5s)
+      +r(767)
+        transform: none
+        opacity: 1
+        visibility: visible
+      +r(576)
+        margin-top: 5px
+        padding: 10px 50px
+        font-size: 12px
+      &::before
+        border-color: $accent
+  &__title
+    margin: 0
+    font-size: 25px
+    font-weight: 400
+    text-transform: uppercase
+    transform: translate3d(0, 40px, 0)
+    +trans(all, 0.5s)
+    +r(767)
+      color: #fff
+      transform: none
+    +r(576)
+      font-size: 16px
+    &::before, &::after
+      content: ''
+      display: block
+      width: 100px
+      height: 1px
+      background-color: $accent
+      margin: 0 auto
+    &::before
+      margin-bottom: 10px
+      +r(767)
+        margin-bottom: 5px
+    &::after
+      margin-top: 5px
+      margin-bottom: 15px
+  &__descr
+    text-transform: uppercase
+    opacity: 0
+    visibility: hidden
+    transform: translate3d(0, 40px, 0)
+    +trans(all, 0.5s)
+    +r(767)
+      transform: none
+      opacity: 1
+      visibility: visible
+      color: #fff
