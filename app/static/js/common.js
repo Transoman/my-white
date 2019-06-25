@@ -1,6 +1,7 @@
 global.jQuery = require('jquery');
 var svg4everybody = require('svg4everybody'),
-popup = require('jquery-popup-overlay');
+popup = require('jquery-popup-overlay'),
+AOS = require('aos');
 import TweenMax from 'gsap/TweenMax';
 
 jQuery(document).ready(function($) {
@@ -133,6 +134,10 @@ jQuery(document).ready(function($) {
 
   $(window).scroll(function() {
     fixedHeader($(this));
+  });
+
+  AOS.init({
+    once: true
   });
 
   // SVG
