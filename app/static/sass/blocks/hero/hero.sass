@@ -21,7 +21,7 @@
     pointer-events: none
   &__content
     +r(576)
-      margin-bottom: 30px
+      //margin-bottom: 30px
     h1
       margin-bottom: 30px
       font-size: 61px
@@ -37,8 +37,9 @@
       +r(767)
         font-size: 32px
       +r(576)
+        margin-bottom: 40px
         font-size: 22px
-        line-height: 1.4
+        line-height: 1.6
       span
         position: relative
         display: block
@@ -49,6 +50,8 @@
           font-size: 21px
         +r(767)
           font-size: 16px
+        +r(576)
+          margin-bottom: 20px
         &::before
           content: ''
           display: inline-block
@@ -87,6 +90,7 @@
       right: 30px
       bottom: 30px
     +r(576)
+      display: none
       position: static
       right: auto
       bottom: auto
