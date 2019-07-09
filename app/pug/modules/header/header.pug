@@ -14,28 +14,25 @@ header.header
           li
             a(href="#contact") Контакты
 
-      .phone.header__phone
-        a(href="tel:88005555561").phone__tel
-          +icon('phone', 'phone__icon')
-          |  8 800 555 55 61
-
   .header__bottom
     .container
       a(href="./").logo.header__logo
-        img(src="static/images/general/logo.svg", alt="My White", width="160")
-        p.logo__descr Создаем белые рубашки <br>исключительно под вас
+        .logo__wrap
+          img(src="static/images/general/logo-top.svg", alt="My White").logo__top
+          img(src="static/images/general/logo-bottom.svg", alt="My White").logo__bottom
+        p.logo__descr Шьем белые рубашки <br>индивидуально для вас
 
       ul.menu.header__menu
         li
-          a(href="#") мужчинам
+          a(href="#wm-shirts") мужчинам
         li
-          a(href="#") женщинам
+          a(href="#wm-shirts") женщинам
         li
-          a(href="#") корпоративный стиль
+          a(href="#corporate") корпоративный стиль
         li
-          a(href="#") детям
+          a(href="#children") детям
         li
-          a(href="#") Подарочный сертификат
+          a(href="#gift") Подарочный сертификат
 
       button(type="type").nav-toggle
         span.nav-toggle__line
@@ -47,15 +44,15 @@ header.header
     .mobile-menu__wrap
       ul.mobile-menu__list
         li
-          a(href="#") Мужчинам
+          a(href="#wm-shirts") Мужчинам
         li
-          a(href="#") Женщинам
+          a(href="#wm-shirts") Женщинам
         li
-          a(href="#") Корпоративный стиль
+          a(href="#corporate") Корпоративный стиль
         li
-          a(href="#") Детям
+          a(href="#children") Детям
         li
-          a(href="#") Подарочный сертификат
+          a(href="#gift") Подарочный сертификат
         li
           a(href="#advantages") Преимущества
         li
@@ -75,7 +72,3 @@ header.header
         li
           a(href="#", target="_blank")
             +icon('instagram', 'social__icon')
-      .phone.mobile-menu__phone
-        a(href="tel:88005555561").phone__tel
-          +icon('phone', 'phone__icon')
-          |  8 800 555 55 61

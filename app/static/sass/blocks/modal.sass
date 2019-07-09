@@ -38,7 +38,6 @@
       transform: rotate(-45deg)
     &:focus
       outline: none
-
   h3
     margin-bottom: 10px
     text-transform: uppercase
@@ -46,15 +45,17 @@
     font-weight: 700
     text-align: center
     color: #212121
-  p
-    font-size: 14px
-    text-align: center
   .btn
     width: 100%
     margin-top: 15px
-
   &__bottom
     text-align: center
+  &__content
+    h3
+      text-align: left
+  &--about
+    width: 100%
+    max-width: 1024px
 
 .popup_visible .modal
   transform: scale(1)
