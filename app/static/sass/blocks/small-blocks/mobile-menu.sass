@@ -11,10 +11,13 @@
   background-color: $bg-color
   overflow-y: auto
   transform: translateX(-200%)
+  +trans(transform, 0.5s)
   &::-webkit-scrollbar
     display: none
   +r(767)
     padding: 80px 30px 30px
+  &.open
+    transform: translateX(0)
   &__close
     position: absolute
     top: 30px
